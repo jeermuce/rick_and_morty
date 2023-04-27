@@ -1,57 +1,101 @@
-.container {
+first-color {
+  background: #388e3c;
+}
+second-color {
+  background: #8bc34a;
+}
+
+third-color {
+  background: #dce775;
+}
+
+fourth-color {
+  background: #fff59d;
+}
+/* Define the animation */
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* Apply the animation to the button */
+
+.cardContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: rgba(104, 165, 73, 1);
-  border-radius: 40px;
+  border-radius: 3em;
+  padding: 1em 1em;
+  margin: 1em 1em;
   width: fit-content;
-  padding: 0em;
-  margin: 1em;
-  box-shadow: 15px -10px 10px 1px rgba(184, 228, 72, 0.8);
-  text-shadow: 4px -6px 5px rgba(184, 228, 72, 1);
-  border: 15px double #53d137;
+  height: fit-content;
+  box-shadow: 15px 5px 10px 1px rgba(184, 228, 72, 0.8);
+  text-shadow: 4px 6px 5px rgba(184, 228, 72, 1);
+  border: 0.5em double #53d137;
   background: radial-gradient(
     ellipse farthest-corner at bottom center,
-    #5aff42 0%,
-    rgba(27, 255, 0, 0.26) 40%,
-    #21b121 80%
+    #fff59d 0%,
+    rgb(26, 255, 0) 50%,
+    #3db91d 85%
   );
 }
+
 .characterIcon {
-  transform: scale(0.9) skew(1deg) translate(-4px, -6px);
-  border-radius: 40px;
+  aspect-ratio: 1;
+  border-radius: 4.4em;
   border: #5aff42;
   filter: drop-shadow(39px 11px 40px #48e942);
-  -webkit-filter: drop-shadow(39px 11px 40px #48e942);
   filter: saturate(229%);
-  -webkit-filter: saturate(150%);
 }
 .closeButton {
+  position: absolute;
   display: flex;
   align-self: flex-end;
   align-content: center;
   justify-content: center;
   background-color: rgb(146, 216, 111);
-  scale: 1.1;
+  scale: 1;
   width: 34px;
   aspect-ratio: 1;
   font-size: larger;
   font-weight: 900;
   border-radius: 180px;
+  margin: -0.45em -0.45em 0em 5em;
   cursor: not-allowed;
+  border-color: #5aff42;
 }
 .closeButton:hover {
   box-shadow: 0px 0px 25px 20px rgba(255, 0, 0, 0.7);
   background-color: red;
   transition: 0.7s;
+  transform: rotate(15, 5);
+  text-align: center;
+
+  animation-name: wiggle;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
 }
 .name {
+  text-align: center;
   font-weight: bolder;
-  height: 15px;
+  font-size: 2.5em;
+  margin: 0.2em;
   align-content: center;
   justify-content: center;
 }
 .data {
+  text-align: center;
   font-weight: 500;
-  padding: none;
-  margin: 0.1em;
+  margin: 0.2em;
 }

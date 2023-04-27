@@ -1,0 +1,9 @@
+.nav {
+  background-color: #388e3c;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+  margin-top: 0em;
+}

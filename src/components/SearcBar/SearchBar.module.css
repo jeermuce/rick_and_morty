@@ -1,0 +1,40 @@
+first-color {
+  background: #388e3c;
+}
+second-color {
+  background: #8bc34a;
+}
+
+third-color {
+  background: #dce775;
+}
+
+fourth-color {
+  background: #fff59d;
+}
+.searchInput {
+  border: none;
+  border-radius: 20px 0 0 20px;
+  background-color: #dce775;
+  cursor: text;
+  width: 200px;
+}
+.searchButton:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 15px rgba(184, 228, 72, 0.8);
+  text-shadow: 5px 5px 5px rgba(184, 228, 72, 1);
+}
+.searchInput::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: rgb(0, 0, 0);
+}
+.searchButton {
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #8bc34a;
+}
+.SearchBarDiv {
+  display: flex;
+  flex-wrap: nowrap;
+}
