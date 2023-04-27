@@ -7,3 +7,14 @@
   margin-bottom: 1em;
   margin-top: 0em;
 }
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-image: url("portal.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
