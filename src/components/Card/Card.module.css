@@ -71,15 +71,17 @@ fourth-color {
     #4ceb08 50%,
     #4fe907a1 75%
   );
-  border-radius: 3em;
   padding: 5px;
   margin: 1em 1em;
   width: 15em;
   height: 25em;
+
+  border-radius: 3em;
   border: 0.5em double #53d137;
 }
 .cardContainer:hover {
-  box-shadow: 0.7em 0.2em 0.8em 0.1em rgb(102, 255, 0);
+  border-color: #00d9ff;
+  box-shadow: 0.7em 0.2em 0.8em 0.1em #00d9ff;
   text-shadow: 0.3em 0.35em 0.4em rgba(184, 228, 72, 1);
   background: radial-gradient(
     circle farthest-corner at bottom center,
@@ -109,6 +111,8 @@ fourth-color {
   position: relative;
 }
 .textButton:hover {
+  box-shadow: 0em 0em 1em 0.8em rgb(102, 255, 0);
+  animation-name: wiggle;
   animation-name: wiggle2;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -163,12 +167,14 @@ fourth-color {
   align-content: center;
   justify-content: center;
   background-color: rgb(146, 216, 111);
-  scale: 1.7;
+  scale: 0.6;
   width: 34px;
   height: 34px;
   font-size: larger;
   font-weight: 900;
   border-radius: 180px;
+  margin-top: 0.4em;
+  margin-right: 0.4em;
   cursor: not-allowed;
   border-color: #5aff42;
 }

@@ -1,6 +1,6 @@
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
-import style from "./App.module.css";
+import "./App.module.css";
 import { useState } from "react";
 import axios from "axios";
 
@@ -8,7 +8,7 @@ function App() {
   const onSearch = (id) => {
     console.log("check contents of id", id);
     console.log("characters array contents", characters);
-    if (characters.find((char) => char.id === id)) {
+    if (characters?.find((char) => char.id === id)) {
       console.log("check if repeat vetoer runs", id);
       window.alert("¡Este personaje ya está en la lista!");
       return;
