@@ -1,14 +1,12 @@
 import Card from "../Card/Card";
-import { CardsContainer } from "./styledComponets";
-export default function Cards({ characters }) {
-  const onClose = () => {
-    window.alert("Cerrando tarjeta");
-  };
+import styles from "./Cards.module.css";
+export default function Cards({ characters, onClose }) {
   return (
-    <CardsContainer>
-      {characters.map(({ name, species, gender, image }) => {
+    <div className={styles.CardsContainer}>
+      {characters.map(({ id, name, species, gender, image }) => {
         return (
           <Card
+            id={id}
             image={image}
             name={name}
             species={species}
@@ -17,6 +15,6 @@ export default function Cards({ characters }) {
           />
         );
       })}
-    </CardsContainer>
+    </div>
   );
 }
