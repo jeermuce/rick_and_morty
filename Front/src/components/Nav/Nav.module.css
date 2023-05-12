@@ -1,0 +1,47 @@
+.Nav {
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  background-color: #000000b9;
+  padding: 0.5rem;
+}
+button {
+  border: 0;
+  font-size: large;
+  cursor: text;
+  width: fit-content;
+  padding: 1em;
+  border-radius: 1em 1em 1em 1em;
+  background-color: #dce775a2;
+  margin-right: 2px;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0em 0em 2em 2em rgba(43, 255, 0, 0.8);
+  text-shadow: 2em 2em 2em rgb(43, 255, 0);
+}
+.titleImage {
+  max-width: 10rem;
+  margin: 0;
+  padding: 0;
+}
+/* <div className={style.Nav}>
+<Link to="/home">
+  <button className={style.titleButton}>Rick and Morty</button>
+</Link>
+<Link to="/home">
+  <button className={style.button}>Home</button>
+</Link>
+<Link to="/about">
+  <button className={style.button}>About</button>
+</Link>
+<Link to="/">
+  <button className={style.logoutButton}>Logout</button>
+</Link>
+<SearchBar onSearch={onSearch} />
+<Link to="/favorites">
+  <button className={style.favoritesButton}>Favorites</button>
+</Link>
+</div> */
