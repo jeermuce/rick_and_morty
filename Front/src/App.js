@@ -39,7 +39,17 @@ function App() {
     }
   };
   const axiosCaller = (id) => {
-    const BASE_URL = "https://rickandmortyapi.com/api";
+    alert("Axios caller");
+    const BASE_URL = "http://localhost:3001/rickandmorty/";
+    //const BASE_URL = "https://rickandmortyapi.com/api/";//this is a former version, ignore
+    /*     fetch(`${BASE_URL}/character/${id}`).then((response) => {
+      response.json().then((data) => {
+        if (data.name)
+          setCharacters((oldCharacters) => [...oldCharacters, data]);
+        else alert("Character not found");
+      });
+    }); */
+    //the following is an axios version
     axios(`${BASE_URL}/character/${id}`).then(({ data }) => {
       setCharacters([...characters, data]);
     });
