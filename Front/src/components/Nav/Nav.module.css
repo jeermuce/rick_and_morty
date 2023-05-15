@@ -1,4 +1,5 @@
 .Nav {
+  z-index: 9999;
   display: flex;
   flex-flow: nowrap row;
   justify-content: space-between;

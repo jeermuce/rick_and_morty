@@ -1,11 +1,15 @@
 import { useState } from "react";
 import style from "./SearchBar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 export default function SearchBar({ onSearch }) {
   const [id, setID] = useState("");
+  const navigate = useNavigate();
+
   const handleChange = (event) => {
     setID(event.target.value);
   };
+
   const handleSearch = () => {
     if (id >= 1 && id <= 826) {
       onSearch(id);
@@ -19,8 +23,10 @@ export default function SearchBar({ onSearch }) {
   const handleEnter = (event) => {
     if (event.key === "Enter") {
       handleSearch();
+      navigate("/home");
     }
   };
+
   return (
     <section className={style.searchBarSection}>
       <input

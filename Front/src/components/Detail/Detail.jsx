@@ -1,7 +1,9 @@
+/*Detail.jsx*/
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import style from "./Detail.module.css";
+
 const Detail = () => {
   const { detailID } = useParams();
   const [character, setCharacter] = useState({});
@@ -12,32 +14,42 @@ const Detail = () => {
       setCharacter(response.data);
     });
   }, []);
+
   return (
     <section className={style.detailPage}>
       {character.origin ? (
-        <section className={style.detailContainer}>
-          <div className={style.dataContainer}>
-            <h1>Details</h1>
-            <h2>
-              <b>Name: {character.name}</b>
-            </h2>
-            <p>Status: {character.status}</p>
-            <p>Species: {character.species}</p>
-            <p>Gender: {character.gender}</p>
-            <p>Origin: {character.origin.name}</p>
+        <>
+          <div className={style.detailBackgroundContainer}>
+            <section
+              className={style.detailBackground}
+              style={{
+                backgroundImage: `url(${character.image})`,
+              }}
+            ></section>
           </div>
-          <aside>
+          <section className={style.detailContainer}>
+            <div className={style.dataContainer}>
+              <h1>Details</h1>
+              <h2>
+                <b>Name: {character.name}</b>
+              </h2>
+              <p>Status: {character.status}</p>
+              <p>Species: {character.species}</p>
+              <p>Gender: {character.gender}</p>
+              <p>Origin: {character.origin.name}</p>
+            </div>
             <img
               src={character.image}
               alt={character.name}
               className={style.characterImage}
             />
-          </aside>
-        </section>
+          </section>
+        </>
       ) : (
         <h2>loading...</h2>
       )}
     </section>
   );
 };
+
 export default Detail;

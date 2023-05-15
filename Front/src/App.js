@@ -1,6 +1,6 @@
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
-import "./App.module.css";
+import style from "./App.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
@@ -9,7 +9,7 @@ import Detail from "./components/Detail/Detail.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import Form from "./components/Form/Form.jsx";
 import { useNavigate } from "react-router-dom";
-import Favorites from "./Favorites/Favorites.jsx";
+import Favorites from "./components/Favorites/Favorites.jsx";
 function App() {
   //*Hooks
   const Navigate = useNavigate();
@@ -39,9 +39,9 @@ function App() {
     }
   };
   const axiosCaller = (id) => {
-    alert("Axios caller");
-    const BASE_URL = "http://localhost:3001/rickandmorty/";
-    //const BASE_URL = "https://rickandmortyapi.com/api/";//this is a former version, ignore
+    // alert("Axios caller");
+    //4const BASE_URL = "http://localhost:3001/rickandmorty/";
+    const BASE_URL = "https://rickandmortyapi.com/api/"; //this is a former version, ignore
     /*     fetch(`${BASE_URL}/character/${id}`).then((response) => {
       response.json().then((data) => {
         if (data.name)
@@ -69,7 +69,9 @@ function App() {
   //*Render
   return (
     <div className="App">
-      {pathname !== "/" && <Nav onSearch={onSearch} setAccess={setAccess} />}
+      {pathname !== "/" && (
+        <Nav onSearch={onSearch} setAccess={setAccess} className={style.Nav} />
+      )}
       <Routes>
         <Route
           path="/"

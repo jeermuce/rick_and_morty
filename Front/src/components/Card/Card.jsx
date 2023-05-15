@@ -50,8 +50,8 @@ function Card({
         </b>
       </section>
 
-      <img className={style.charIcon} src={image} alt="" />
       <Link to={`/Detail/${id}`}>
+        <img className={style.charIcon} src={image} alt="" />
         <b>{name}</b>
       </Link>
       <b>{species}</b>
