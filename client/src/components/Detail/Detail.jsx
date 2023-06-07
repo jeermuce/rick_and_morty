@@ -9,7 +9,7 @@ const Detail = () => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    const BASE_URL = "https://rickandmortyapi.com/api";
+    const BASE_URL = "http://localhost:3001/rickandmorty";
     axios(`${BASE_URL}/character/${detailID}`).then((response) => {
       setCharacter(response.data);
     });

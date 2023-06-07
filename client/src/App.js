@@ -49,10 +49,14 @@ function App() {
   };
 
   const axiosCaller = (id) => {
-    const BASE_URL = "https://rickandmortyapi.com/api/";
-    axios(`${BASE_URL}/character/${id}`).then(({ data }) => {
-      setCharacters([...characters, data]);
-    });
+    const BASE_URL = "http://localhost:3001/rickandmorty";
+    //const BASE_URL = "https://rickandmortyapi.com/api/";
+    axios(`${BASE_URL}/character/${id}`)
+      .then((response) => response.json())
+      .then(({ data }) => {
+        setCharacters([...characters, data]);
+      })
+      .catch((err) => console.log(`Hubo un error${err}`));
   };
 
   const onClose = (id) => {

@@ -11,22 +11,23 @@
 .detailBackgroundContainer {
   z-index: 1;
   position: absolute;
-  height: 150vh;
-  width: 150vw;
-  margin: -2vh;
+  height: 180vh;
+  width: 140vw;
+  margin: -3vh;
   overflow: hidden;
 }
 
 .detailBackground {
   z-index: 2;
   position: absolute;
-  height: 150vh;
-  width: 150vw;
+  height: 180vh;
+  width: 140vw;
   background-size: cover;
   background-position: center;
-  margin: -10vh;
+  margin: -12vh;
   backdrop-filter: blur(5px);
   filter: blur(15px);
+  overflow: hidden;
 }
 
 .detailContainer {
@@ -34,6 +35,7 @@
   background-color: #97ce4c;
   padding: 1em;
   min-width: fit-content;
+  max-width: fit-content;
   width: 50vw;
   display: flex;
   flex-flow: row nowrap;
