@@ -2,10 +2,12 @@
 
 # dependencies
 /client/node_modules
+/viteClient/node_modules
 /server/node_modules
 /node_modules
 /client/integration
 /server/integration
+/viteClient/integration
 /.pnp
 .pnp.js
 
