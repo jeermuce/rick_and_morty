@@ -6,15 +6,15 @@ export default function About() {
   return (
     <div className={style.page}>
       <div className={style.container}>
-        <section className={style.logoContainer}>
-          <img
-            className={style.logoWithName}
-            src={logoWithName}
-            alt="logo_with_name"
-          />
-        </section>
         <section className={style.textContainer}>
-          <h2>My name is Ernesto, </h2>
+          <section className={style.logoContainer}>
+            <img
+              className={style.logoWithName}
+              src={logoWithName}
+              alt="logo_with_name"
+            />
+          </section>
+          <h2>My name is Ernesto</h2>
           <p>
             I'm a aspiring software engineer, currently learning Web Development
             Full Stack at soyHenry, and enrolled in a Software Engineering
@@ -30,6 +30,7 @@ export default function About() {
             course.
           </p>
           <p>I hope you enjoy it!</p>
+
           <a
             className={style.sourceButton}
             href="https://github.com/jeermuce/rick_and_morty"
@@ -40,8 +41,6 @@ export default function About() {
             />
           </a>
         </section>
-
-        <p></p>
       </div>
     </div>
   );

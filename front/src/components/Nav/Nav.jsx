@@ -17,7 +17,6 @@ const Nav = ({ onSearch, setAccess }) => {
           className={style.titleImage}
         />
       </Link>
-
       <Link to="/home">
         <button className={style.button}>Home</button>
       </Link>
