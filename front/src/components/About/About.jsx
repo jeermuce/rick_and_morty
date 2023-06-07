@@ -23,7 +23,7 @@ export default function About() {
           <p>
             This website is a project assigned as a way to integrate all the
             knowledge we've acquired during the course. In the Front End stage
-            of the bootcamp, I used React, Redux, and CSS modules to access an
+            of the bootcamp I used React, Redux, and CSS modules to access an
             API available at https://rickandmortyapi.com/ and display
             information about the characters of the show Rick and Morty. I will
             soon be constructing a Back End to this project as I advance in the
