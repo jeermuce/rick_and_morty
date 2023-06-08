@@ -1,0 +1,15 @@
+.cardsBox {
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.cardsFlex {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #95d838be;
+  max-width: 80vw;
+  border-radius: 2rem;
+}

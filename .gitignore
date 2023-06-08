@@ -1,13 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/client/node_modules
-/viteClient/node_modules
-/server/node_modules
 /node_modules
+/client/node_modules
+/server/node_modules
 /client/integration
 /server/integration
-/viteClient/integration
 /.pnp
 .pnp.js
 

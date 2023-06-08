@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "../SearcBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import style from "./Nav.module.css";
 import { Link } from "react-router-dom";
 import RickAndMortyLogo from "./Rick-And-Morty-Logo.png"; // import the image here
@@ -28,7 +28,9 @@ const Nav = ({ onSearch, setAccess }) => {
         <button className={style.favoritesButton}>Favorites</button>
       </Link>
       <Link to="/">
-        <button className={style.logoutButton}>Logout</button>
+        <button className={style.logoutButton} onClick={handleLogout}>
+          Logout
+        </button>
       </Link>
     </div>
   );
