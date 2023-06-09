@@ -51,7 +51,7 @@ function App() {
   const axiosCaller = (id) => {
     const BASE_URL = "http://localhost:3001/rickandmorty";
     //const BASE_URL = "https://rickandmortyapi.com/api/";
-    alert("axios");
+
     axios(`${BASE_URL}/character/${id}`)
       .then(({ data }) => {
         setCharacters([...characters, data]);
