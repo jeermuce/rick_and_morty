@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import validation from "./validation";
 import style from "./Form.module.css";
-import Portal from "./portal_best.png"; // import the image here
+import Portal from "../../assets/portal_best.png"; // import the image here
 //Responsive ready
 const Form = ({ login, setAccess }) => {
   const [userData, setUserData] = useState({ username: "", password: "" });

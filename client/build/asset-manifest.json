@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9d5ad856.css",
+    "main.js": "/static/js/main.4eda1f2e.js",
+    "static/media/background.jpg": "/static/media/background.e4c044223cfcd405e964.jpg",
+    "static/media/Rick-And-Morty-Logo.png": "/static/media/Rick-And-Morty-Logo.d2be7c519b50cfc1decb.png",
+    "static/media/portal_best.png": "/static/media/portal_best.f99d3a6eab87a3ee0ade.png",
+    "static/media/logo_syrin_name.png": "/static/media/logo_syrin_name.f7d420ec3cbae94fc061.png",
+    "static/media/get_schwifty.ttf": "/static/media/get_schwifty.c3d1dfc692e3547fed16.ttf",
+    "index.html": "/index.html",
+    "main.9d5ad856.css.map": "/static/css/main.9d5ad856.css.map",
+    "main.4eda1f2e.js.map": "/static/js/main.4eda1f2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d5ad856.css",
+    "static/js/main.4eda1f2e.js"
+  ]
+}
