@@ -9,7 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: fit-content;
+  border-radius: 50%;
+  background-color: none;
+  visibility: hidden;
 }
 
 .cardsBox {
@@ -18,20 +21,38 @@
   align-items: center;
   width: 100%;
 }
-
+/* .cardsBox {
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.42em;
+}
+.cardsFlex {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #53d838be;
+  max-width: 80vw;
+  border-radius: 2rem;
+}
+ */
 .cardsBox > div {
   display: flex;
-  flex-wrap: wrap;
-  background-color: #95d838ef;
-  max-width: 80%;
+  flex-flow: row wrap;
+  background-color: #53d838be;
+  max-width: 80vw;
   border-radius: 2rem;
 }
 
 .filters select {
+  visibility: visible;
   border: none;
   font-size: large;
   cursor: pointer;
   padding: 0.5em;
+  height: 2.2em;
   border-radius: 1em;
   margin-right: 2px;
   cursor: pointer;

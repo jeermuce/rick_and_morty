@@ -5,11 +5,12 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  margin-top: 2.42em;
 }
 .cardsFlex {
   display: flex;
   flex-flow: row wrap;
-  background-color: #95d838be;
+  background-color: #53d838be;
   max-width: 80vw;
   border-radius: 2rem;
 }

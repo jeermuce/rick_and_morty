@@ -16,8 +16,8 @@ export default function About() {
           </section>
           <h2>My name is Ernesto</h2>
           <p>
-            I'm a aspiring software engineer, currently learning Web Development
-            Full Stack at soyHenry, and enrolled in a Software Engineering
+            I'm an aspiring software engineer, currently learning Full Stack Web
+            Development at soyHenry, and enrolled in a Software Engineering
             degree at the Universidad Autónoma de Chihuahua.
           </p>
           <p>
@@ -29,7 +29,7 @@ export default function About() {
             soon be constructing a Back End to this project as I advance in the
             course.
           </p>
-          <p>I hope you enjoy it!</p>
+          <p>I hope you like it!</p>
 
           <a
             className={style.sourceButton}

@@ -9,7 +9,7 @@ function getCharById(res, id) {
         name,
         gender,
         species,
-        origin: origin.name,
+        origin,
         image,
         status,
       };
@@ -23,4 +23,4 @@ function getCharById(res, id) {
         .end(error.message);
     });
 }
-module.exports = {getCharById};
+module.exports = { getCharById };
