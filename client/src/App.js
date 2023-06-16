@@ -18,7 +18,6 @@ import Form from "./components/Form/Form.jsx";
 import Favorites from "./components/Favorites/Favorites.jsx";
 
 function App() {
-  //* Hooks
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [characters, setCharacters] = useState([]);
@@ -28,12 +27,7 @@ function App() {
     !access && navigate("/");
   }, [access]);
 
-  //! Fake Credentials
-  const EMAIL = "Rick@schwifty.com";
-  const PASSWORD = "M59tw123";
-
-  //* Event Handlers
-  const onSearch = (id) => {
+  function onSearch(id) {
     if (id) {
       const characterExists = characters.find(
         (character) => character.id === Number(id)
@@ -41,38 +35,53 @@ function App() {
       if (characterExists) {
         alert("Character already added");
       } else {
-        axiosCaller(id);
+        const BASE_URL = "http:/localhost:3001/rickandmorty";
+
+        axios(`${BASE_URL}/character/${id}`)
+          .then(({ data }) => {
+            setCharacters([...characters, data]);
+          })
+          .catch((err) => console.log(`Hubo un error${err}`));
       }
     } else {
       alert("Please enter a valid id");
     }
-  };
+  }
+  function onSearch(id) {
+    if (id) {
+      const characterExists = characters.find((character) => {
+        return character.id == id;
+      });
+      if (!!characterExists) {
+        alert("Character already added");
+      } else {
+        const BASE_URL = "http://localhost:3001/rickandmorty";
 
-  const axiosCaller = (id) => {
-    const BASE_URL = "http://localhost:3001/rickandmorty";
-    //const BASE_URL = "https://rickandmortyapi.com/api/";
-
-    axios(`${BASE_URL}/character/${id}`)
-      .then(({ data }) => {
-        setCharacters([...characters, data]);
-      })
-      .catch((err) => console.log(`Hubo un error${err}`));
-  };
-
-  const onClose = (id) => {
-    setCharacters(characters.filter((character) => character.id !== id));
-  };
-
-  const login = (userData) => {
-    if (userData.username === EMAIL && userData.password === PASSWORD) {
-      setAccess(true);
-      navigate("/home");
+        axios(`${BASE_URL}/character/${id}`)
+          .then(({ data }) => {
+            setCharacters([...characters, data]);
+          })
+          .catch((err) => console.log(`Hubo un error${err}`));
+      }
     } else {
-      alert("Invalid Credentials");
+      alert("Please enter a valid id");
     }
-  };
+  }
 
-  //* Render
+  function onClose(id) {
+    console.log("onClose has been called");
+    setCharacters(characters.filter((character) => character.id != id));
+  }
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = "http://localhost:3001/rickandmorty/login/";
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      const { access } = data;
+      setAccess(access);
+      access && navigate("/home");
+    });
+  }
+
   return (
     <div className="App">
       {pathname !== "/" && (
@@ -87,7 +96,7 @@ function App() {
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
         />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/favorites" element={<Favorites onClose={onClose} />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:detailID" element={<Detail />} />
         <Route path="*" element={<NotFound />} />

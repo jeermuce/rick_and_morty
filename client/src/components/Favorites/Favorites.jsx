@@ -48,37 +48,5 @@ function Favorites() {
       </div>
     </div>
   );
-  /*   return (
-    <div className={style.cardsBox}>
-      <div filters={style.filters}>
-        <select onChange={handleOrder}>
-          <option value="A">Ascending</option>
-          <option value="D">Descending</option>
-        </select>
-        <select onChange={handleFilter}>
-          <option value="All">All</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Genderless">Genderless</option>
-          <option value="unknown">Unknown</option>
-        </select>
-      </div>
-      <div className={style.cardsFlex}>
-        {favorites?.map(({ id, name, species, gender, image, onClose }) => {
-          return (
-            <Card
-              id={id}
-              key={id}
-              image={image}
-              name={name}
-              species={species}
-              gender={gender}
-              onClose={onClose}
-            />
-          );
-        })}
-      </div>
-    </div>
-  ); */
 }
 export default Favorites;

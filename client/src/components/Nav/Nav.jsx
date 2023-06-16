@@ -2,8 +2,8 @@ import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import style from "./Nav.module.css";
 import { Link } from "react-router-dom";
-import RickAndMortyLogo from "./Rick-And-Morty-Logo.png"; // import the image here
-
+import RickAndMortyLogo from "../../assets/Rick-And-Morty-Logo.png"; // import the image here
+import portal from "../../assets/portal_best.png";
 const Nav = ({ onSearch, setAccess }) => {
   const handleLogout = () => {
     setAccess(false);

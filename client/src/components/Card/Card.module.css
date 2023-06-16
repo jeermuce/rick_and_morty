@@ -9,16 +9,13 @@
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
-  background: #15ba52;
-  border: 0.7em ridge #50ff82;
+  background: #956fce;
+  border: 0.7em ridge #b592e9;
   text-align: center;
 }
 .card:hover {
   animation: wiggle 0.5s ease-in-out infinite;
   background-color: rainbow;
-  box-shadow: 0px 0px 2rem 1.5rem rgba(0, 255, 0, 0.69);
-  -webkit-box-shadow: 0px 0px 2rem 1.5rem rgba(0, 255, 0, 0.69);
-  -moz-box-shadow: 0px 0px 2rem 1.5rem rgba(0, 255, 0, 0.69);
 }
 
 @keyframes wiggle {

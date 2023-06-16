@@ -15,12 +15,12 @@ button {
   width: fit-content;
   padding: 1em;
   border-radius: 1em 1em 1em 1em;
-  background-color: #dce775a2;
+  background-color: #192278;
   margin-right: 2px;
   cursor: pointer;
 }
 button:hover {
-  box-shadow: 0em 0em 2em 2em rgba(43, 255, 0, 0.8);
+  box-shadow: 0em 0em 1em 1em #a074e2;
 }
 .titleImage {
   max-width: 10rem;

@@ -1,50 +1,43 @@
 import { useState, useEffect } from "react";
 import validation from "./validation";
 import style from "./Form.module.css";
-import Portal from "../../assets/portal_best.png"; // import the image here
-//Responsive ready
+import Portal from "../../assets/portal_best.png";
 const Form = ({ login, setAccess }) => {
-  const [userData, setUserData] = useState({ username: "", password: "" });
-  const [errors, setErrors] = useState({ username: "", password: "" });
+  const [userData, setUserData] = useState({ email: "", password: "" });
+  const [errors, setErrors] = useState({ email: "", password: "" });
   useEffect(() => {
     setAccess(false);
   }, []);
-  const handleInputChange = (event) => {
-    /* const property = event.target.name;
-    const value = event.target.value;
-    setUserData({ ...userData, [property]: value }); */
+  function handleInputChange(event) {
     setUserData({ ...userData, [event.target.name]: event.target.value });
     validation(
       { ...userData, [event.target.name]: event.target.value },
       errors,
       setErrors
     );
-  };
-  const handleSubmit = (event) => {
+  }
+  function handleSubmit(event) {
     event.preventDefault();
     login(userData);
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit} className={style.Form}>
       <section className={style.imageContainer}>
-        <img
-          src={Portal} // use the imported variable as the src
-          alt="Portal"
-          className={style.portalImage}
-        />
+        <img src={Portal} alt="Portal" className={style.portalImage} />
       </section>
       <section className={style.formContainer}>
         <section className={style.inputContainer}>
           <label htmlFor="username">Username</label>
           <input
             type="text"
-            name="username"
+            name="email" // Update the name attribute to "email"
             className={style.formInput}
-            value={userData.username}
+            value={userData.email} // Update to userData.email
             onChange={handleInputChange}
             placeholder="email, 35 char max..."
           ></input>
+
           <p>{errors.username}</p>
           <label htmlFor="password">Password</label>
           <input

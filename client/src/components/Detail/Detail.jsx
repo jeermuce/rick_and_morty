@@ -19,14 +19,6 @@ const Detail = () => {
     <section className={style.detailPage}>
       {character.origin ? (
         <>
-          <div className={style.detailBackgroundContainer}>
-            <section
-              className={style.detailBackground}
-              style={{
-                backgroundImage: `url(${character.image})`,
-              }}
-            ></section>
-          </div>
           <section className={style.detailContainer}>
             <div className={style.dataContainer}>
               <h1>Details</h1>

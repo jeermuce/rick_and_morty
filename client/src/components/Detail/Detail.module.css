@@ -3,36 +3,13 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  padding: 1em;
-}
-
-.detailBackgroundContainer {
-  z-index: 1;
-  position: absolute;
-  height: 180vh;
-  width: 140vw;
-  margin: -3vh;
-  overflow: hidden;
-}
-
-.detailBackground {
-  z-index: 2;
-  position: absolute;
-  height: 180vh;
-  width: 140vw;
-  background-size: cover;
-  background-position: center;
-  margin: -12vh;
-  backdrop-filter: blur(5px);
-  filter: blur(15px);
   overflow: hidden;
 }
 
 .detailContainer {
   z-index: 3;
-  background-color: #97ce4c;
+  background: #956fce;
+  border: 0.7em ridge #b592e9;
   padding: 1em;
   min-width: fit-content;
   max-width: fit-content;
@@ -42,13 +19,17 @@
   justify-content: space-evenly;
   align-items: center;
   border-radius: 5rem;
-  border: 18px ridge #97ce4c;
+
+  overflow: hidden;
 }
 
 .characterImage {
   border-radius: 15rem;
+  border: 0.7em ridge #b592e9;
   height: 100%;
   margin: 1em;
+
+  overflow: hidden;
 }
 
 /* Media query for screens below 550px */
