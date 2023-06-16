@@ -1,5 +1,5 @@
 import style from "./Card.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Detail from "../Detail/Detail";
 import { addFavorite, removeFavorite } from "../../redux/actions/actions";
 import { connect } from "react-redux";
@@ -23,6 +23,7 @@ function Card({
     });
   }, [myFavorites]);
   const [isFavorite, setIsFavorite] = useState(false);
+  const location = useLocation();
   function handleFavorite() {
     if (!!isFavorite) {
       setIsFavorite(false);
@@ -45,9 +46,11 @@ function Card({
             💚
           </b>
         )}
-        <b className={style.closeButton} onClick={() => onClose(Number(id))}>
-          ✖
-        </b>
+        {location.pathname === "/home" && (
+          <b className={style.closeButton} onClick={() => onClose(Number(id))}>
+            ✖
+          </b>
+        )}
       </section>
 
       <Link to={`/Detail/${id}`}>

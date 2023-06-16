@@ -41,7 +41,7 @@
 .cardsBox > div {
   display: flex;
   flex-flow: row wrap;
-  background-color: #53d838be;
+  background-color: #404ca88f;
   max-width: 80vw;
   border-radius: 2rem;
 }
