@@ -10,7 +10,7 @@
 .cardsFlex {
   display: flex;
   flex-flow: row wrap;
-  background-color: #525ca58f;
+  background-color: #525ca580;
   max-width: 80vw;
   border-radius: 2rem;
 }

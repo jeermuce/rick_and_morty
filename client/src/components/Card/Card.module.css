@@ -15,15 +15,22 @@
 }
 .card:hover {
   animation: wiggle 0.5s ease-in-out infinite;
+  scale: 1.2;
   background-color: #59cf7a;
 
   border: 0.7em groove #3fb962;
 
-  transition: background-color 0.2s ease-in-out 0.2s;
-  transition: border 0.2s ease-in-out 0.2s;
   -webkit-box-shadow: 0px 0px 50px 30px #59cf7a;
   -moz-box-shadow: 0px 0px 50px 30px #59cf7a;
   box-shadow: 0px 0px 50px 30px #59cf7a;
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 @keyframes wiggle {
@@ -66,8 +73,17 @@
   width: 90%;
   aspect-ratio: 1;
   border-radius: 1em;
+  scale: 1;
+  border-radius: 50%;
+}
+.charIcon:hover {
+  cursor: pointer;
+  scale: 1.1;
+  animation: wiggle 0.1s linear infinite;
+  border: groove 0.2em #3fb962;
 }
 .buttons {
+  z-index: 50;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -78,4 +94,28 @@
   margin-right: 1.5em;
   cursor: pointer;
   margin-left: 1.5em;
+}
+
+.favoriteButton:hover {
+  scale: 3;
+  border-radius: 50%;
+}
+.closeButton:hover {
+  scale: 2;
+  border-radius: 20em;
+  background-color: white;
+  border: groove 0.01em black;
+  box-shadow: 0px 0px 20px 2px #ff0000;
+}
+.favoriteButton {
+  height: 1.4em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.closeButton {
+  height: 1.4em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  text-align: center;
+  text-justify: center;
 }

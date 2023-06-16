@@ -55,7 +55,7 @@ function Card({
 
       <Link to={`/Detail/${id}`}>
         <img className={style.charIcon} src={image} alt="" />
-        <b>{name}</b>
+        <b className={style.nameLink}>{name}</b>
       </Link>
       <b>{species}</b>
       <b> {gender}</b>
