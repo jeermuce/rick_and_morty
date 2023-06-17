@@ -11,6 +11,7 @@
 button {
   border: 0;
   font-size: large;
+  font-size: 01.01em;
   cursor: pointer;
   width: 3.2em;
   padding: 1em;
@@ -21,6 +22,10 @@ button {
 }
 button:hover {
   box-shadow: 0em 0em 1em 1em #a074e2;
+}
+.logoutSymbol {
+  aspect-ratio: 1;
+  width: 1.1em;
 }
 .titleImage {
   max-width: 10rem;

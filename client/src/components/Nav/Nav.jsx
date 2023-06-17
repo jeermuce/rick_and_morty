@@ -4,6 +4,7 @@ import style from "./Nav.module.css";
 import { Link } from "react-router-dom";
 import RickAndMortyLogo from "../../assets/Rick-And-Morty-Logo.png"; // import the image here
 import portal from "../../assets/portal_best.png";
+import logoutSymbol from "../../assets/logout_symbol.png";
 const Nav = ({ onSearch, setAccess }) => {
   const handleLogout = () => {
     setAccess(false);
@@ -29,7 +30,11 @@ const Nav = ({ onSearch, setAccess }) => {
       </Link>
       <Link to="/">
         <button className={style.logoutButton} onClick={handleLogout}>
-          Logout
+          <img
+            src={logoutSymbol}
+            alt="logoutSymbol"
+            className={style.logoutSymbol}
+          />
         </button>
       </Link>
     </div>
