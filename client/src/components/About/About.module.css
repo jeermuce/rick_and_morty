@@ -6,6 +6,7 @@
   width: 100vw;
   height: fit-content;
   color: #f854b7;
+  margin-top: 2.42em;
 }
 .container {
   display: flex;
@@ -14,7 +15,7 @@
   background-color: #5863c6;
   border-radius: 2rem;
   width: 80%;
-
+  max-width: 800px;
   height: fit-content;
   color: black;
   margin: 0;
