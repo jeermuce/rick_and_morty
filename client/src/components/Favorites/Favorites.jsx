@@ -31,7 +31,7 @@ function Favorites() {
           <option value="unknown">Unknown</option>
         </select>
       </div>
-      <div className={style.cardsFlex}>
+      <div className={style.cardsGrid}>
         {favorites?.map(({ id, name, species, gender, image }) => {
           return (
             <Card

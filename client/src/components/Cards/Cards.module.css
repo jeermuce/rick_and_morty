@@ -3,14 +3,18 @@
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
   margin-top: 2.42em;
 }
-.cardsFlex {
-  display: flex;
-  flex-flow: row wrap;
-  background-color: #525ca580;
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: rem;
   max-width: 80vw;
+  margin: 0;
+  padding: 1em;
+  background-color: #404ca88f;
+  margin: 0 auto;
   border-radius: 2rem;
 }

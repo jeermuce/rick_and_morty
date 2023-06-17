@@ -1,6 +1,6 @@
 .searchBarSection {
   text-align: center;
-  position: relative;
+  position: sticky;
   display: flex;
   flex-flow: row nowrap;
   box-sizing: border-box;
