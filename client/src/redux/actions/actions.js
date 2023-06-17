@@ -9,29 +9,40 @@ const URL = "http://localhost:3001/rickandmorty";
 function addFavorite(character) {
   const endpoint = `${URL}/fav`;
   return async (dispatch) => {
-    await axios.post(endpoint, character).then(({ data }) => {
+    try {
+      const { data } = await axios.post(endpoint, character);
+      if (!data.length) throw new Error("No favorites found");
       return dispatch({
         type: ADD_FAVORITE,
         payload: data,
       });
-    });
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 }
 function removeFavorite(id) {
-  const endpoint = `${URL}/fav/${id}`;
   return async (dispatch) => {
-    await axios.delete(endpoint).then(({ data }) => {
+    try {
+      const endpoint = `${URL}/fav/${id}`;
+      const { data } = await axios.delete(endpoint);
+      if (!data || !data.length) {
+        throw new Error("No favorites found");
+      }
+
       return dispatch({
         type: REMOVE_FAVORITE,
         payload: data,
       });
-    });
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 }
-async function filterCards(gender) {
+function filterCards(gender) {
   return { type: FILTER, payload: gender };
 }
-async function orderCards(order) {
+function orderCards(order) {
   return { type: ORDER, payload: order };
 }
 export { addFavorite, removeFavorite, filterCards, orderCards };

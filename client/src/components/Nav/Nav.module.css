@@ -11,8 +11,8 @@
 button {
   border: 0;
   font-size: large;
-  cursor: text;
-  width: fit-content;
+  cursor: pointer;
+  width: 3.2em;
   padding: 1em;
   border-radius: 1em 1em 1em 1em;
   background-color: #192278;

@@ -46,9 +46,10 @@
   height: 80%;
 }
 .logoWithName {
-  width: 12vw;
-  min-width: 12rem;
+  width: 8vw;
+  min-width: 8rem;
   margin: 0;
+  padding: 0;
 }
 @media only screen and (min-width: 20px) and (max-width: 768px) {
   .logoContainer {

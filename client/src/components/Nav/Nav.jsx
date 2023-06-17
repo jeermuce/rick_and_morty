@@ -18,14 +18,14 @@ const Nav = ({ onSearch, setAccess }) => {
         />
       </Link>
       <Link to="/home">
-        <button className={style.button}>Home</button>
+        <button className={style.button}>🏠</button>
       </Link>
       <Link to="/about">
-        <button className={style.button}>About</button>
+        <button className={style.button}>❔</button>
       </Link>
       <SearchBar onSearch={onSearch} />
       <Link to="/favorites">
-        <button className={style.favoritesButton}>Favorites</button>
+        <button className={style.favoritesButton}>❤️</button>
       </Link>
       <Link to="/">
         <button className={style.logoutButton} onClick={handleLogout}>
