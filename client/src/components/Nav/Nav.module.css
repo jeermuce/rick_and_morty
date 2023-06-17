@@ -2,18 +2,23 @@
   z-index: 9999;
   display: flex;
   flex-flow: nowrap row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: fit-content;
   background-color: #000000b9;
   padding: 0.5rem;
+}
+img {
+  margin: 0;
+  padding: 0;
 }
 button {
   border: 0;
   font-size: large;
   font-size: 01.01em;
   cursor: pointer;
-  width: 3.2em;
+  min-width: 3.6em;
+  width: fit-content;
   padding: 1em;
   border-radius: 1em 1em 1em 1em;
   background-color: #192278;
@@ -28,6 +33,10 @@ button:hover {
   width: 1.3em;
 }
 .homeSymbol {
+  aspect-ratio: 1;
+  width: 1.3em;
+}
+.heartSymbol {
   aspect-ratio: 1;
   width: 1.3em;
 }

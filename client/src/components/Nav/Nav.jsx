@@ -6,6 +6,7 @@ import RickAndMortyLogo from "../../assets/Rick-And-Morty-Logo.png"; // import t
 import portal from "../../assets/portal_best.png";
 import logoutSymbol from "../../assets/logout_symbol.png";
 import homeSymbol from "../../assets/home_symbol.png";
+import heartSymbol from "../../assets/heart.png";
 const Nav = ({ onSearch, setAccess }) => {
   const handleLogout = () => {
     setAccess(false);
@@ -29,7 +30,13 @@ const Nav = ({ onSearch, setAccess }) => {
       </Link>
       <SearchBar onSearch={onSearch} />
       <Link to="/favorites">
-        <button className={style.favoritesButton}>❤️</button>
+        <button className={style.favoritesButton}>
+          <img
+            src={heartSymbol}
+            alt="heartSymbol"
+            className={style.heartSymbol}
+          />
+        </button>
       </Link>
       <Link to="/">
         <button className={style.logoutButton} onClick={handleLogout}>
