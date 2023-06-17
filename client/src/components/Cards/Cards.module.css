@@ -1,19 +1,17 @@
 .cardsBox {
-  border: none;
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  background-color: red;
   margin-top: 2.42em;
 }
 
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: rem;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  grid-gap: 0rem;
   max-width: 80vw;
-  margin: 0;
+  align-items: center;
   padding: 1em;
+  margin: 0;
+  padding: 0;
   background-color: #404ca88f;
   margin: 0 auto;
   border-radius: 2rem;
