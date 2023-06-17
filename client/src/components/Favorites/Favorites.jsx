@@ -32,7 +32,7 @@ function Favorites() {
         </select>
       </div>
       <div className={style.cardsFlex}>
-        {favorites?.map(({ id, name, species, gender, image, onClose }) => {
+        {favorites?.map(({ id, name, species, gender, image }) => {
           return (
             <Card
               id={id}
@@ -41,7 +41,6 @@ function Favorites() {
               name={name}
               species={species}
               gender={gender}
-              onClose={onClose}
             />
           );
         })}

@@ -26,6 +26,7 @@ function removeFavorite(id) {
     try {
       const endpoint = `${URL}/fav/${id}`;
       const { data } = await axios.delete(endpoint);
+      //console.log(data);
       if (!data || !data.length) {
         throw new Error("No favorites found");
       }

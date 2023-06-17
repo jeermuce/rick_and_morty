@@ -14,17 +14,21 @@ const rootReducer = (state = initialState, action) => {
     default:
       return { ...state };
     case ADD_FAVORITE:
-      return {
+      const objectAddfav = {
         ...state,
         myFavorites: action.payload,
         allCharactersFav: action.payload,
       };
+      //console.log(objectAddfav);
+      return objectAddfav;
     case REMOVE_FAVORITE:
-      return {
+      const objectRemovefav = {
         ...state,
         myFavorites: action.payload,
         allCharactersFav: action.payload,
       };
+      //console.log(objectRemovefav);
+      return objectRemovefav;
     case FILTER:
       return {
         ...state,

@@ -15,6 +15,17 @@ function Card({
   removeFavorite,
   myFavorites,
 }) {
+  const [isFavorite, setIsFavorite] = useState(false);
+  const location = useLocation();
+
+  function handleFavorite() {
+    setIsFavorite((prevIsFavorite) => !prevIsFavorite);
+    if (!isFavorite) {
+      addFavorite({ id, name, species, gender, image, onClose });
+    } else {
+      removeFavorite(id);
+    }
+  }
   useEffect(() => {
     myFavorites.forEach((fav) => {
       if (fav.id === id) {
@@ -22,18 +33,6 @@ function Card({
       }
     });
   }, [myFavorites]);
-  const [isFavorite, setIsFavorite] = useState(false);
-  const location = useLocation();
-  function handleFavorite() {
-    if (!!isFavorite) {
-      setIsFavorite(false);
-      removeFavorite(id);
-    } else {
-      setIsFavorite(true);
-      addFavorite({ id, name, species, gender, image, onClose });
-    }
-  }
-
   return (
     <section className={style.card}>
       <section className={style.buttons}>
