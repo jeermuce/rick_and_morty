@@ -13,6 +13,12 @@ img {
   margin: 0;
   padding: 0;
 }
+img:hover {
+  cursor: progress;
+  scale: 1.3;
+  margin: 0;
+  padding: 0;
+}
 button {
   border: 0;
   font-size: large;
@@ -22,11 +28,13 @@ button {
   width: fit-content;
   padding: 1em;
   border-radius: 1em 1em 1em 1em;
-  background-color: #192278;
+  background-color: #3b46ad;
   margin-right: 2px;
   cursor: pointer;
 }
 button:hover {
+  scale: 1.2;
+  border-radius: 1em;
   box-shadow: 0em 0em 1em 1em #a074e2;
 }
 .logoutSymbol {
@@ -43,7 +51,9 @@ button:hover {
 }
 
 .titleImage {
-  max-width: 10rem;
+  max-width: 10em;
+  min-width: 10em;
+  aspect-ratio: fixed;
   margin: 0;
   padding: 0;
 }
