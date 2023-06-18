@@ -34,15 +34,21 @@ button:hover {
 }
 .logoutSymbol {
   aspect-ratio: 1;
-  width: 1.3em;
+
+  height: 1.3em;
 }
 .homeSymbol {
   aspect-ratio: 1;
-  width: 1.3em;
+
+  height: 1.3em;
 }
 .heartSymbol {
   aspect-ratio: 1;
-  width: 1.3em;
+
+  height: 1.3em;
+}
+.eroteme {
+  height: 1.3em;
 }
 
 .titleImage {

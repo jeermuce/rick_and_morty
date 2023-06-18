@@ -7,6 +7,7 @@ import portal from "../../assets/portal_best.png";
 import logoutSymbol from "../../assets/logout_symbol.png";
 import homeSymbol from "../../assets/home_symbol.png";
 import heartSymbol from "../../assets/heart.png";
+import eroteme from "../../assets/eroteme.png";
 const Nav = ({ onSearch, setAccess }) => {
   const handleLogout = () => {
     setAccess(false);
@@ -26,7 +27,10 @@ const Nav = ({ onSearch, setAccess }) => {
         </button>
       </Link>
       <Link to="/about">
-        <button className={style.button}>❔</button>
+        <button className={style.button}>
+          {" "}
+          <img src={eroteme} alt="eroteme" className={style.eroteme} />
+        </button>
       </Link>
       <Link to="/favorites">
         <button className={style.favoritesButton}>
@@ -47,8 +51,6 @@ const Nav = ({ onSearch, setAccess }) => {
         </button>
       </Link>
       <SearchBar onSearch={onSearch} />
-
-      {/* if window width > */}
     </div>
   );
 };
