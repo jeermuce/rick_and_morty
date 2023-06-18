@@ -2,6 +2,8 @@ import { useState } from "react";
 import style from "./SearchBar.module.css";
 import { Link, useNavigate } from "react-router-dom";
 
+import plusSymbol from "../../assets/plus_symbol.png";
+
 export default function SearchBar({ onSearch }) {
   const [id, setID] = useState("");
   const navigate = useNavigate();
@@ -43,7 +45,7 @@ export default function SearchBar({ onSearch }) {
           onClick={handleSearch}
           onKeyDown={handleEnter}
         >
-          +
+          <img src={plusSymbol} alt="plusSymbol" className={style.plusSymbol} />
         </button>
       </Link>
     </section>

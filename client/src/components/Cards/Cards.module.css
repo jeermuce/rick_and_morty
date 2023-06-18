@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   grid-gap: 0rem;
-  max-width: 80vw;
+  max-width: 90vw;
   width: fit-content;
   min-width: 0;
   align-items: center;
