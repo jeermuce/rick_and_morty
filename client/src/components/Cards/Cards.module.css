@@ -1,19 +1,40 @@
 .cardsBox {
-  margin-top: 2.42em;
+    margin-top: 3.4em;
 }
 
 .cardsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-  grid-gap: 0rem;
-  max-width: 90vw;
-  width: fit-content;
-  min-width: 0;
-  align-items: center;
-  padding: 1em;
-  margin: 0;
-  padding: 0;
-  background-color: #404ca88f;
-  margin: 0 auto;
-  border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 0rem;
+    max-width: 60rem;
+    width: fit-content;
+    min-width: 0;
+    align-items: center;
+    padding: 0em;
+    background-color: #404ca88f;
+    margin: auto;
+    border-radius: 2rem;
+}
+@media (max-width: 485px) {
+    .cardsGrid {
+        max-width: 380px;
+    }
+}
+@media (min-width: 470px) and (max-width: 768px) {
+    .cardsGrid {
+        max-width: 680px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 947px) {
+    .cardsGrid {
+        max-width: 900px;
+    }
+}
+@media (min-width: 947px) and (max-width: 992px) {
+    .cardsGrid {
+        max-width: 920px;
+    }
+}
+@media (min-width: 992px) {
 }

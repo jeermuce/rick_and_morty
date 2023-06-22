@@ -1,51 +1,72 @@
 .container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .filters {
-  display: flex;
-  width: fit-content;
-  border-radius: 50%;
-  background-color: none;
-  visibility: hidden;
+    display: flex;
+    width: fit-content;
+    border-radius: 50%;
+    background-color: none;
+    visibility: hidden;
 }
 
 .cardsBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .cardsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: rem;
-  max-width: 80vw;
-  margin: 0;
-  padding: 1em 2em 1em 1em;
-  background-color: #404ca88f;
-  margin: 0 auto;
-  border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 0rem;
+    max-width: 60rem;
+    width: fit-content;
+    min-width: 0;
+    align-items: center;
+    padding: 0em;
+    background-color: #404ca88f;
+    margin: auto;
+    border-radius: 2rem;
+}
+@media (max-width: 485px) {
+    .cardsGrid {
+        max-width: 380px;
+    }
+}
+@media (min-width: 470px) and (max-width: 768px) {
+    .cardsGrid {
+        max-width: 680px;
+    }
+}
+@media (min-width: 768px) and (max-width: 947px) {
+    .cardsGrid {
+        max-width: 900px;
+    }
+}
+@media (min-width: 947px) {
+    .cardsGrid {
+        max-width: 920px;
+    }
 }
 
 .filters select {
-  visibility: visible;
-  border: none;
-  font-size: large;
-  cursor: pointer;
-  padding: 0.5em;
-  height: 2.2em;
-  border-radius: 1em;
-  margin-right: 2px;
-  cursor: pointer;
-  outline: none;
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+    margin-right: 2px;
+    visibility: visible;
+    border: none;
+    font-size: large;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5em;
+    height: 2.2em;
+    border-radius: 1em;
+    cursor: pointer;
+    outline: none;
 }
 
 .filters select:hover {
-  box-shadow: 0 0 5px rgba(43, 255, 0, 0.8);
-  text-shadow: 2px 2px 2px rgb(43, 255, 0);
+    box-shadow: 0 0 5px rgba(43, 255, 0, 0.8);
 }

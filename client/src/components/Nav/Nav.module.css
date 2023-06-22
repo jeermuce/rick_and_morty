@@ -1,60 +1,154 @@
+.backNav {
+    z-index: 9999;
+    scale: 1;
+    position: sticky;
+    min-height: 0rem;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    border-radius: 1em;
+    padding: 0.5rem;
+}
+
 .Nav {
-  z-index: 9999;
-  position: sticky;
-  display: flex;
-  flex-flow: nowrap row;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #000000b9;
-  padding: 0.5rem;
+    z-index: 9999;
+    scale: 1;
+    position: sticky;
+    min-width: fit-content;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000d5;
+    border-radius: 1em;
+    padding: 0.5rem;
 }
-img {
-  margin: 0;
-  padding: 0;
-}
-img:hover {
-  cursor: progress;
-  scale: 1.3;
-  margin: 0;
-  padding: 0;
-}
-button {
-  border: 0;
-  aspect-ratio: 1;
-  min-width: 4em;
-
-  border-radius: 1em;
-  background-color: #3b46ad;
-  cursor: pointer;
-}
-button:hover {
-  scale: 1.2;
-  border-radius: 1em;
-  box-shadow: 0em 0em 1em 1em #a074e2;
-}
-.logoutSymbol {
-  aspect-ratio: 1;
-
-  height: 1.3em;
-}
-.homeSymbol {
-  aspect-ratio: 1;
-
-  height: 1.3em;
-}
-.heartSymbol {
-  aspect-ratio: 1;
-
-  height: 1.3em;
-}
-.eroteme {
-  height: 1.3em;
+.RickAndMortyLogoContainer {
+    display: flex;
+    justify-content: center;
+    min-width: 14rem;
+    max-width: 14rem;
+    background-color: none;
 }
 
 .titleImage {
-  max-width: 10em;
-  min-width: 10em;
-  aspect-ratio: fixed;
-  margin: 0;
-  padding: 0;
+    max-width: 10em;
+    min-width: 10em;
+    aspect-ratio: fixed;
+    margin: 0em 0em 0em 0em;
+    padding: 0;
+}
+
+.titleImage:hover {
+    scale: 1.3;
+    max-width: 10em;
+    min-width: 10em;
+    aspect-ratio: fixed;
+    padding: 0;
+}
+img {
+    padding: 0;
+}
+
+img:hover {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    aspect-ratio: 1;
+    min-width: 4em;
+    margin: 0 0.6em 0em 0em;
+    border-radius: 1em;
+    background-color: #3b46ad;
+    cursor: pointer;
+}
+
+button:hover {
+    scale: 1.2;
+    border-radius: 1em;
+    box-shadow: 0em 0em 1em 1em #a074e2;
+}
+
+.logoutSymbol {
+    aspect-ratio: 1;
+    height: 1.3em;
+}
+
+.homeSymbol {
+    aspect-ratio: 1;
+    height: 1.3em;
+}
+
+.heartSymbol {
+    aspect-ratio: 1;
+    height: 1.3em;
+}
+
+.eroteme {
+    height: 1.3em;
+}
+
+@media (max-width: 768px) {
+    .aboutButton {
+        display: none;
+    }
+    .Nav {
+        scale: 1.1;
+        border-radius: 0;
+        min-width: fit-content;
+        max-width: none;
+    }
+
+    button {
+        border: 0;
+        aspect-ratio: 1;
+        min-width: 4em;
+        border-radius: 1em;
+        background-color: #3b46ad;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .Nav {
+        scale: 1.3;
+        border-radius: 1rem;
+        min-width: fit-content;
+        max-width: none;
+    }
+    button {
+        border: 0;
+        scale: 1;
+
+        aspect-ratio: 1;
+
+        min-width: 4em;
+        margin: 0 1em 0em 0em;
+        border-radius: 1em;
+        background-color: #3b46ad;
+    }
+}
+@media (min-width: 992px) {
+    .backNav {
+        background-color: none;
+    }
+    .Nav {
+        scale: 1.3;
+        border-radius: 1em;
+        width: 40rem;
+        max-width: fit-content;
+    }
+    button {
+        border: 0;
+        scale: 1;
+        aspect-ratio: 1;
+        min-width: 4em;
+        margin: 0 1em 0em 0em;
+        border-radius: 1em;
+        background-color: #3b46ad;
+    }
 }

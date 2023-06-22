@@ -1,28 +1,35 @@
 .searchBarSection {
-  display: flex;
+    display: flex;
 }
 .searchInput {
-  border: 0;
-  font-size: large;
-  cursor: text;
-  border-radius: 1em 0em 0em 1em;
-  background-color: #7563de;
+    border: 0;
+    font-size: large;
+    cursor: text;
+    border-radius: 1em 0em 0em 1em;
+    background-color: #7563de;
 }
+
+@media (max-width: 768px) {
+    .searchInput {
+        width: 7.5rem;
+    }
+}
+
 .searchButton {
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  aspect-ratio: 1;
-  min-width: 4em;
-  border-radius: 0em 1em 1em 0em;
-  background-color: #3b46ad;
-  cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    aspect-ratio: 1;
+    min-width: 4em;
+    border-radius: 0em 1em 1em 0em;
+    background-color: #3b46ad;
+    cursor: pointer;
 }
 .searchButton:hover {
-  border-radius: 0.6em;
-  box-shadow: 0em 0em 1em 1em #ad80f0;
+    border-radius: 0.6em;
+    box-shadow: 0em 0em 1em 1em #ad80f0;
 }
 .plusSymbol {
-  aspect-ratio: 1;
-  width: 1.3em;
+    aspect-ratio: 1;
+    width: 1.3em;
 }
