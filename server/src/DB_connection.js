@@ -13,6 +13,7 @@ const sequelize = new Sequelize(
     { logging: false, native: false }
 );
 console.log("Calling authenticate...");
+
 sequelize
     .authenticate()
     .then(() => {

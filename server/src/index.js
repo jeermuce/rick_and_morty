@@ -6,6 +6,7 @@ const { conn } = require("./DB_connection");
 
 const PORT = 3001;
 conn.sync({ force: true }).then(async () => {
+    console.log(`db options: ${JSON.stringify(conn.options)}`);
     await server.listen(PORT, () => {
         server.use(express.json());
         server.use(morgan("dev"));

@@ -13,12 +13,9 @@ const Form = ({ login, setAccess }) => {
     }, []);
 
     function handleInputChange(event) {
-        setUserData({ ...userData, [event.target.name]: event.target.value });
-        validation(
-            { ...userData, [event.target.name]: event.target.value },
-            errors,
-            setErrors
-        );
+        const { name, value } = event.target;
+        setUserData({ ...userData, [name]: value });
+        setErrors(validation({ ...userData, [name]: value }));
     }
 
     function handleSubmit(event) {
@@ -56,11 +53,7 @@ const Form = ({ login, setAccess }) => {
 
                     <p>{errors.password}</p>
                     <div className={style.loginDiv}>
-                        <button
-                            type="submit"
-                            className={style.loginButton}
-                            onTouchStart={handleSubmit}
-                        >
+                        <button type="submit" className={style.loginButton}>
                             Login
                         </button>
                     </div>
