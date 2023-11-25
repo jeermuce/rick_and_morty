@@ -4,73 +4,72 @@ import Detail from "../Detail/Detail";
 import { addFavorite, removeFavorite } from "../../redux/actions/actions";
 import { connect } from "react-redux";
 import { useEffect, useState } from "react";
-function Card({
-  id,
-  name,
-  species,
-  gender,
-  image,
-  onClose,
-  addFavorite,
-  removeFavorite,
-  myFavorites,
-}) {
-  const [isFavorite, setIsFavorite] = useState(false);
-  const location = useLocation();
+function Card({ id, name, species, gender, image, onClose, myFavorites }) {
+    const [isFavorite, setIsFavorite] = useState(false);
+    const location = useLocation();
 
-  function handleFavorite() {
-    setIsFavorite((prevIsFavorite) => !prevIsFavorite);
-    if (!isFavorite) {
-      addFavorite({ id, name, species, gender, image, onClose });
-    } else {
-      removeFavorite(id);
+    function handleFavorite() {
+        setIsFavorite((prevIsFavorite) => !prevIsFavorite);
+        if (!isFavorite) {
+            addFavorite({ id, name, species, gender, image, onClose });
+        } else {
+            removeFavorite(id);
+        }
     }
-  }
-  useEffect(() => {
-    myFavorites.forEach((fav) => {
-      if (fav.id === id) {
-        setIsFavorite(true);
-      }
-    });
-  }, [myFavorites]);
-  return (
-    <section className={style.card}>
-      <section className={style.buttons}>
-        {isFavorite ? (
-          <b onClick={handleFavorite} className={style.favoriteButton}>
-            ❤️
-          </b>
-        ) : (
-          <b onClick={handleFavorite} className={style.favoriteButton}>
-            💚
-          </b>
-        )}
-        {location.pathname === "/home" && (
-          <b className={style.closeButton} onClick={() => onClose(Number(id))}>
-            ✖
-          </b>
-        )}
-      </section>
+    useEffect(() => {
+        myFavorites.forEach((fav) => {
+            if (fav.id === id) {
+                setIsFavorite(true);
+            }
+        });
+    }, [myFavorites]);
+    return (
+        <section className={style.card}>
+            <section className={style.buttons}>
+                {isFavorite ? (
+                    <b
+                        onClick={handleFavorite}
+                        className={style.favoriteButton}
+                    >
+                        ❤️
+                    </b>
+                ) : (
+                    <b
+                        onClick={handleFavorite}
+                        className={style.favoriteButton}
+                    >
+                        💚
+                    </b>
+                )}
+                {location.pathname === "/home" && (
+                    <b
+                        className={style.closeButton}
+                        onClick={() => onClose(Number(id))}
+                    >
+                        ✖
+                    </b>
+                )}
+            </section>
 
-      <Link to={`/Detail/${id}`}>
-        <img className={style.charIcon} src={image} alt="" />
-        <b className={style.nameLink}>{name}</b>
-      </Link>
-      <b>{species}</b>
-      <b> {gender}</b>
-    </section>
-  );
+            <Link to={`/Detail/${id}`}>
+                <img className={style.charIcon} src={image} alt="" />
+                <b className={style.nameLink}>{name}</b>
+            </Link>
+            <b>{species}</b>
+            <b> {gender}</b>
+        </section>
+    );
 }
 function mapStateToProps(state) {
-  return {
-    myFavorites: state.myFavorites,
-  };
+    return {
+        myFavorites: state.myFavorites,
+    };
 }
 function mapDispatchToProps(dispatch) {
-  return {
-    addFavorite: (character) => dispatch(addFavorite(character)),
-    removeFavorite: (id) => dispatch(removeFavorite(id)),
-  };
+    return {
+        addFavorite: (character) => dispatch(addFavorite(character)),
+        removeFavorite: (id) => dispatch(removeFavorite(id)),
+    };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

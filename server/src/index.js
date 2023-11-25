@@ -26,6 +26,6 @@ conn.sync({ force: true }).then(async () => {
         });
 
         server.use("/rickandmorty", router);
-        console.log(`server raised in http://localhost:${PORT}/`);
+        console.log(`server raised in http://localhost:${PORT}/rickandmorty`);
     });
 });

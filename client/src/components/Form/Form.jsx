@@ -15,7 +15,8 @@ const Form = ({ login, setAccess }) => {
     function handleInputChange(event) {
         const { name, value } = event.target;
         setUserData({ ...userData, [name]: value });
-        setErrors(validation({ ...userData, [name]: value }));
+        const validationRes = validation({ ...userData, [name]: value });
+        setErrors({ ...errors, validationRes });
     }
 
     function handleSubmit(event) {
