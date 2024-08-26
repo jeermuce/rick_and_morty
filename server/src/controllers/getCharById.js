@@ -16,7 +16,7 @@ async function getCharById(req, res) {
 			image,
 			gender,
 		};
-		console.log(character);
+
 		return res.status(200).json(character);
 	} catch (error) {
 		error.message.includes("ID")

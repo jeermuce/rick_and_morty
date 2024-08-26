@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, SSL_ENABLED } = process.env;
 const { Sequelize } = require("sequelize");
 const FavoriteModel = require("./models/Favorite");
 const UserModel = require("./models/User");
@@ -10,7 +10,7 @@ const UserModel = require("./models/User");
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
 	`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
-	{ logging: false, native: false, dialectOptions: { ssl: true } },
+	{ logging: false, native: false, dialectOptions: { ssl: SSL_ENABLED } },
 );
 console.log("Calling authenticate...");
 
