@@ -1,5 +1,4 @@
 require("dotenv").config();
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, SSL_ENABLED } = process.env;
 const { Sequelize } = require("sequelize");
 const FavoriteModel = require("./models/Favorite");
 const UserModel = require("./models/User");
@@ -8,11 +7,17 @@ const UserModel = require("./models/User");
 // A la instancia de Sequelize le falta la URL de conexión. ¡Agrégala!
 // Recuerda pasarle la información de tu archivo '.env'.
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, SSL_ENABLED } = process.env;
+
 const sequelize = new Sequelize(
-	`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
-	{ logging: false, native: false, dialectOptions: { ssl: SSL_ENABLED } },
+	`postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+	{
+		logging: false,
+		native: false,
+		dialectOptions: { ssl: SSL_ENABLED === "true" }, // Evaluates the environment variable SSL_ENABLED to a boolean
+	},
 );
-console.log("Calling authenticate...");
+console.log("Authenticating to database...");
 
 sequelize
 	.authenticate()
